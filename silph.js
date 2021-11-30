@@ -48,10 +48,9 @@ var outStr = "";
 allGroups.forEach(function (g) {
 	g.tasks.forEach(function (t) {
 		outStr += g.group + "\t";
-		outStr += t.task + "\t";
-		console.log(t.task);
+		outStr += t.task;
 		t.rewards.forEach(function (r) {
-			outStr += r.reward + "\t";
+			outStr += "\t" + r.reward;
 		});
 		outStr += "\n";
 	});
