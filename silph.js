@@ -55,4 +55,5 @@ allGroups.forEach(function (g) {
 		outStr += "\n";
 	});
 });
-console.log(outStr);
+console.log(outStr); // TABULAR OUTPUT
+// console.log(allGroups); // OBJECT OUTPUT
