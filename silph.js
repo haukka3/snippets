@@ -31,8 +31,7 @@ $(".task-group").each(function (i,e) {
 			rewardText = rewardText[rewardText.length - 1].split(".")[0];
 			if (rewardText.includes("-")) {
 				rewardText = rewardText.split("-").map((w) => w[0].toUpperCase() + w.slice(1)).join(" ");
-			}
-			if (Number.isInteger(Number(rewardText))) {
+			} else if (Number.isInteger(Number(rewardText))) {
 				rewardText = pokemons.find((p) => p.id === Number(rewardText)).name;
 			}
 		} else if ($(this).is(".tr_mega")) {
