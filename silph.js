@@ -29,7 +29,9 @@ $(".task-group").each(function (i,e) {
 		if ($(this).is(".pokemon")) {
 			rewardText = $(this).children("img").attr("src").split("/");
 			rewardText = rewardText[rewardText.length - 1].split(".")[0];
-			rewardText = pokemons.find((p) => p.id === Number(rewardText)).name;
+			if (Number.isInteger(Number(rewardText))) {
+				rewardText = pokemons.find((p) => p.id === Number(rewardText)).name;
+			}
 		} else if ($(this).is(".tr_mega")) {
 			rewardText = $(this).children("img").first().attr("src").split("/");
 			rewardText = rewardText[rewardText.length - 1].split(".")[0];
